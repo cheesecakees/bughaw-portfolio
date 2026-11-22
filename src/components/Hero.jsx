@@ -15,7 +15,10 @@ export default function Hero() {
         </div>
         <div className="pw rise">
           {data.photo ? (
-            <img className="photo" src={data.photo} alt={data.name} style={{ objectFit: 'cover', width: '100%' }} />
+            <div className="portrait">
+              <div className="portrait-ring" aria-hidden="true" />
+              <img src={data.photo} alt={data.name} />
+            </div>
           ) : (
             <div className="photo" role="img" aria-label="Profile photo placeholder">{data.photoLabel}</div>
           )}

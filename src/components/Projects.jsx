@@ -1,5 +1,4 @@
 import data from '../data/portfolio'
-import Icon from './Icon'
 
 function spotlight(e) {
   const r = e.currentTarget.getBoundingClientRect()
@@ -11,7 +10,7 @@ export default function Projects() {
   return (
     <section id="projects">
       <div className="wrap">
-        <div><h2>Featured projects</h2></div>
+        <div><h2>Featured Projects</h2></div>
         <div className="projects">
           {data.projects.map((p, i) => (
             <article className="proj" key={i} onMouseMove={spotlight}>
@@ -26,10 +25,7 @@ export default function Projects() {
                 <div className="chips">
                   {p.tech.map((t) => <span className="chip" key={t}>{t}</span>)}
                 </div>
-                <div className="links">
-                  <a href={p.github}><Icon n="github" /> Code</a>
-                  <a href={p.demo}><Icon n="out" /> Live demo</a>
-                </div>
+                <div className="role-line"><b>My role:</b> {p.role}</div>
               </div>
             </article>
           ))}

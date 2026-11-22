@@ -4,7 +4,7 @@ export default function Skills() {
   return (
     <section id="skills">
       <div className="wrap">
-        <div><h2>Skills and technologies</h2></div>
+        <div><h2>Skills and Technologies</h2></div>
         <div className="skills">
           {data.skills.map((g) => (
             <div key={g.group}>

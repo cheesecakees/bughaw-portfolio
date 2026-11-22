@@ -10,10 +10,14 @@ export default function About() {
             {data.about.intro.map((t, i) => <p key={i} className="ph">{t}</p>)}
           </div>
           <div>
-            <h3>Education</h3>
-            <p className="ph">{data.about.education}</p>
-            <h3 style={{ marginTop: 28 }}>Interests and goals</h3>
+            <h3>Interests and goals</h3>
             <p className="ph">{data.about.goals}</p>
+            <h3 style={{ marginTop: 28 }}>Organizations</h3>
+            <ul className="orgs">
+              {data.about.organizations.map((o, i) => (
+                <li key={i}><strong>{o.name}</strong><span>{o.role}</span></li>
+              ))}
+            </ul>
           </div>
         </div>
       </div>

@@ -44,7 +44,7 @@ export default function Contact() {
     <section id="contact">
       <div className="wrap contact">
         <div>
-          <h2>Let’s talk</h2>
+          <h2>Let’s Talk</h2>
           <p className="ph">{data.closing}</p>
           <ul>
             <li><a href={'mailto:' + data.email}><Icon n="mail" /> {data.email}</a></li>

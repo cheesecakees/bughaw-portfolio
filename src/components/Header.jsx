@@ -14,7 +14,7 @@ export default function Header({ active }) {
           </button>
           <ul className={open ? 'open' : ''}>
             {data.nav.map((n) => {
-              const id = n.toLowerCase()
+              const id = n.toLowerCase().replace(/\s+/g, "")
               return (
                 <li key={n}>
                   <a href={'#' + id} className={active === id ? 'on' : ''}

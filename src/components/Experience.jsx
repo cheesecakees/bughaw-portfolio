@@ -19,7 +19,7 @@ export default function Experience() {
   return (
     <section id="experience">
       <div className="wrap">
-        <div><h2>Experience and education</h2></div>
+        <div><h2>Experience and Education</h2></div>
         <div className="two">
           <div>
             <h3 style={{ marginBottom: 24 }}>Experience</h3>
