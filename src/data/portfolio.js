@@ -4,7 +4,7 @@ const portfolio = {
   name: 'CHESCA AYESA C. BUGHAW',
   title: '[YOUR PROFESSIONAL TITLE]',
   tagline: '[WRITE YOUR TAGLINE HERE]',
-  photo: '/me.jpg',git 
+  photo: '/me.jpg', 
   photoLabel: '[ADD YOUR PROFILE PHOTO]',
   email: '[YOUR EMAIL ADDRESS]',
   socials: [
