@@ -9,6 +9,7 @@ import Experience from './components/Experience'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Certifications from './components/Certifications'
+import './nav-indicator.js'
 
 const IDS = data.nav.map((n) => n.toLowerCase())
 

@@ -262,3 +262,57 @@ img.cert-img{
   object-position:center top;
 }
 
+/* ===== Hero portrait: refined frame v2 ===== */
+.pw{
+  --w:min(100%,340px,calc((100svh - 240px) * 720 / 1130));
+  position:relative;isolation:isolate;
+  display:block;width:var(--w);max-width:none;margin-inline:auto;
+}
+
+/* arte #1: manipis na outline na bahagyang naka-offset sa likod ng frame */
+.pw::before{
+  content:"";position:absolute;inset:0;z-index:-1;
+  transform:translate(14px,14px);
+  border:1px solid rgba(197,143,157,.4);   /* Rose Quartz, mahina */
+  border-radius:24px;
+}
+
+.portrait{
+  /* ayusin dito ang posisyon mo sa frame */
+  --zoom:1.1;     /* mas mataas = mas malaki ka sa frame */
+  --lift:-10%;     /* mas negatibo = mas mataas ka sa frame */
+
+  position:relative;width:100%;aspect-ratio:720/1130;
+  border-radius:24px;overflow:hidden;animation:none;
+
+  border:1px solid transparent;
+  background:
+    linear-gradient(var(--slate),var(--slate)) padding-box,
+    linear-gradient(135deg,var(--blue),var(--rose)) border-box;
+  box-shadow:
+    0 0 48px -14px rgba(120,149,173,.32),
+    0 0 90px -34px rgba(197,143,157,.24);
+}
+
+.portrait img{
+  display:block;width:100%;height:100%;
+  object-fit:cover;object-position:center top;
+  transform-origin:50% 0;
+  transform:translateY(var(--lift)) scale(var(--zoom));
+}
+
+/* arte #2: bahagyang dilim sa ibaba para mas malalim ang itsura */
+.portrait::after{
+  content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;
+  background:linear-gradient(180deg,transparent 65%,rgba(23,37,54,.45) 100%);
+}
+
+@media(max-width:1024px){
+  .pw{--w:min(100%,320px,calc((100svh - 240px) * 720 / 1130))}
+}
+@media(max-width:800px){
+  .pw{--w:min(78%,280px)}
+  .pw::before{transform:translate(10px,10px);border-radius:22px}
+  .portrait{border-radius:22px}
+}
+
