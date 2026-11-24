@@ -5,7 +5,7 @@ export default function Certifications() {
   return (
     <section id="certifications">
       <div className="wrap">
-        <div><h2>Certificates and badges</h2></div>
+        <div><h2>Certificates and Badges</h2></div>
 
         <div className="cert-grid">
           {data.certifications.map((c, i) => (

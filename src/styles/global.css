@@ -178,3 +178,87 @@ img.cert-img{aspect-ratio:4/3;object-fit:contain;background:#0f1a27}
 .portrait-ring{display:none}
 .portrait img{position:static;transform:none;display:block;width:100%;height:100%;max-width:none;
   object-fit:cover;object-position:center bottom;filter:none;-webkit-mask-image:none;mask-image:none}
+  
+.proj img.shot{
+  display:block;width:100%;height:auto;padding:0;
+  aspect-ratio:16/9;object-fit:cover;object-position:top center;
+  background:#1b2a3a;
+}
+
+.shot:has(> img){padding:0;position:relative;overflow:hidden;background:#1b2a3a}
+.shot > img{
+  position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:top center;display:block;
+}
+
+.proj:first-child img.shot{
+  flex:1.2;width:auto;min-width:0;min-height:260px;
+  align-self:stretch;aspect-ratio:16/9;
+}
+
+@media(max-width:800px){
+  .proj:first-child img.shot{flex:none;width:100%;min-height:0;align-self:auto}
+}
+
+/* ===== images + gradient ===== */
+.proj img.shot{
+  display:block;width:100%;height:auto;padding:0;
+  aspect-ratio:16/9;object-fit:cover;object-position:top center;
+  background:#1b2a3a;
+}
+.proj:first-child img.shot{
+  flex:1.2;width:auto;min-width:0;min-height:260px;
+  align-self:stretch;aspect-ratio:16/9;
+}
+
+.proj:has(img.shot)::after{
+  content:"";position:absolute;top:0;left:0;width:100%;aspect-ratio:16/9;
+  pointer-events:none;z-index:1;transition:opacity .3s;
+  background:
+    linear-gradient(180deg,transparent 40%,rgba(27,42,58,.95) 100%),
+    linear-gradient(135deg,rgba(120,149,173,.35),rgba(197,143,157,.3));
+}
+.proj:has(img.shot):hover::after{opacity:.6}
+
+@media(min-width:801px){
+  .proj:first-child:has(img.shot)::after{
+    width:calc(100% * 1.2 / 2.2);height:100%;aspect-ratio:auto;
+    background:
+      linear-gradient(90deg,transparent 45%,rgba(27,42,58,.95) 100%),
+      linear-gradient(135deg,rgba(120,149,173,.35),rgba(197,143,157,.3));
+  }
+}
+
+@media(max-width:800px){
+  .proj:first-child img.shot{flex:none;width:100%;min-height:0;align-self:auto}
+}
+
+/* ===== gradient effect: certificates ===== */
+.cert{position:relative}
+
+img.cert-img{
+  background:linear-gradient(135deg,rgba(120,149,173,.45),rgba(197,143,157,.35)),#0f1a27;
+}
+
+.cert:has(.cert-img)::after{
+  content:"";position:absolute;top:0;left:0;width:100%;aspect-ratio:4/3;
+  pointer-events:none;z-index:1;transition:opacity .3s;
+  background:
+    linear-gradient(180deg,transparent 70%,rgba(27,42,58,.85) 100%),
+    linear-gradient(135deg,rgba(120,149,173,.14),rgba(197,143,157,.12));
+}
+.cert:has(.cert-img):hover::after{opacity:.5}
+
+.badge img{
+  filter:drop-shadow(0 8px 14px rgba(197,143,157,.45));
+  transition:filter .25s;
+}
+.badge:hover img{
+  filter:drop-shadow(0 12px 20px rgba(120,149,173,.75));
+}
+
+img.cert-img{
+  object-fit:cover;
+  object-position:center top;
+}
+

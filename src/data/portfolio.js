@@ -4,7 +4,7 @@ const portfolio = {
   name: 'Chesca Ayesa C. Bughaw',
   title: 'Information Technology Student | Aspiring IT Professional',
   tagline: 'Driven by curiosity, built through technology, and inspired by innovation.',
-  photo: '/mee..png', 
+  photo: '/final.png', 
   photoLabel: 'Profile photo of Chesca Ayesa C. Bughaw',
   email: 'bughaw.chescaayesa.canaria@gmail.com',
   socials: [
@@ -68,7 +68,7 @@ const portfolio = {
     description:
       'A route navigation application designed to help commuters find public transportation routes in Quezon City. Features include route searching, saved locations, fare contributions, and community reporting.',
     tech: ['React.js', 'Node.js', 'JavaScript', 'Supabase'],
-    image: null,
+    image: '/qr.png',
     imageLabel: 'QRoute Project Screenshot',
     role: 'Backend Developer',
   },
@@ -77,7 +77,7 @@ const portfolio = {
     description:
       'An e-learning ranking system designed to encourage student participation through gamification. Includes a ranking system with points, badges, levels, and leaderboards.',
     tech: ['Java', 'MySQL', 'JavaFX'],
-    image: null,
+    image: '/edu.png',
     imageLabel: 'EduRank Project Screenshot',
     role: 'Database Administrator and Backend Developer'
   },
@@ -86,7 +86,7 @@ const portfolio = {
     description:
       'An employee management system designed to organize employee information and workplace processes. Contributed to database development, documentation, and system requirements.',
     tech: ['Database Management', 'SQL', 'Documentation'],
-    image: null,
+    image: '/fwd.png',
     imageLabel: 'FWD Technologies Project Screenshot',
     role: 'Documentation and Assistant Database Administrator',
   },
@@ -95,7 +95,7 @@ const portfolio = {
     description:
       'A digital platform project focused on providing an accessible and user-friendly interface. Contributed to the user interface design and visual organization of the application.',
     tech: ['Figma', 'UI Design', 'Prototyping'],
-    image: null,
+    image: '/k.png',
     imageLabel: 'Kalinga PH Project Screenshot',
     role: 'User Interface Designer'
   },
