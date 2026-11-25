@@ -171,9 +171,15 @@ img.cert-img{aspect-ratio:4/3;object-fit:contain;background:#0f1a27}
   object-fit:contain;object-position:bottom;filter:drop-shadow(0 18px 24px rgba(0,0,0,.35))}
 
   
-.portrait{aspect-ratio:720/1130;overflow:hidden;border-radius:999px 999px 22px 22px;
-  background:linear-gradient(165deg,rgba(120,149,173,.6),rgba(197,143,157,.5) 75%,rgba(32,45,59,.9));
-  border:1px solid rgba(217,175,184,.35);box-shadow:12px 12px 0 -2px rgba(197,143,157,.28)}
+.portrait {
+  aspect-ratio: 720/1130;
+  overflow: hidden;
+  border-radius: 999px 999px 22px 22px;
+  background: linear-gradient(165deg, rgba(120,149,173,.6), rgba(197,143,157,.5) 75%, rgba(32,45,59,.9));
+  border: 1px solid rgba(217,175,184,.35);
+  box-shadow: 12px 12px 0 -2px rgba(197,143,157,.28);
+  animation: float 7s ease-in-out infinite;
+}
 .portrait::before{display:none}
 .portrait-ring{display:none}
 .portrait img{position:static;transform:none;display:block;width:100%;height:100%;max-width:none;
@@ -277,18 +283,23 @@ img.cert-img{
   border-radius:24px;
 }
 
-.portrait{
-  /* ayusin dito ang posisyon mo sa frame */
-  --zoom:1.1;     /* mas mataas = mas malaki ka sa frame */
-  --lift:-10%;     /* mas negatibo = mas mataas ka sa frame */
+.portrait {
+  --zoom: 1.1;
+  --lift: -10%;
 
-  position:relative;width:100%;aspect-ratio:720/1130;
-  border-radius:24px;overflow:hidden;animation:none;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 720/1130;
+  border-radius: 24px;
+  overflow: hidden;
 
-  border:1px solid transparent;
+  animation: float 7s ease-in-out infinite;
+
+  border: 1px solid transparent;
   background:
-    linear-gradient(var(--slate),var(--slate)) padding-box,
-    linear-gradient(135deg,var(--blue),var(--rose)) border-box;
+    linear-gradient(var(--slate), var(--slate)) padding-box,
+    linear-gradient(135deg, var(--blue), var(--rose)) border-box;
+
   box-shadow:
     0 0 48px -14px rgba(120,149,173,.32),
     0 0 90px -34px rgba(197,143,157,.24);
@@ -343,4 +354,3 @@ img.cert-img{
   justify-content: center;
   gap: 4px;
 }
-
