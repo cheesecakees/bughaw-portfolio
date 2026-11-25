@@ -19,7 +19,7 @@ const portfolio = {
   ],
   goals: 'Interested in pursuing opportunities in database management, web development, and data-related fields. Aims to continuously improve technical skills, gain practical industry experience, and contribute to developing reliable and user-centered technology solutions.',
       organizations: [
-      { name: 'LESIT', role: 'Events and Productions Committee' },
+      { name: 'LESIT', role: 'Events and Productions Committee', image: '/lesit.jpeg' },
     ],
 },
   skills: [

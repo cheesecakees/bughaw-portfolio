@@ -14,10 +14,22 @@ export default function About() {
             <p className="ph">{data.about.goals}</p>
             <h3 style={{ marginTop: 28 }}>Organizations</h3>
             <ul className="orgs">
-              {data.about.organizations.map((o, i) => (
-                <li key={i}><strong>{o.name}</strong><span>{o.role}</span></li>
-              ))}
-            </ul>
+  {data.about.organizations.map((o, i) => (
+    <li key={i} className="org-item">
+      {o.image && (
+        <img
+          src={o.image}
+          alt={`${o.name} logo`}
+          className="org-logo"
+        />
+      )}
+      <div className="org-info">
+        <strong>{o.name}</strong>
+        <span>{o.role}</span>
+      </div>
+    </li>
+  ))}
+</ul>
           </div>
         </div>
       </div>
