@@ -9,7 +9,7 @@ export default function About() {
   <div>
     {data.about.intro.map((t, i) => <p key={i} className="ph">{t}</p>)}
   </div>
-  <div style={{ transform: 'translateY(-80px)' }}>
+  <div>
     <h3>Interests and goals</h3>
             <p className="ph">{data.about.goals}</p>
             <h3 style={{ marginTop: 28 }}>Organizations</h3>

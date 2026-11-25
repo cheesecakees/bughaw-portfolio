@@ -612,3 +612,18 @@ section:not(#home) > .wrap {
   position: relative;
   z-index: 1;
 }
+
+/* Desktop lang aangat ang box para pumantay sa About me */
+@media (min-width: 801px) {
+  #about .two > div:last-child {
+    transform: translateY(-90px); /* gamitin mo yung eksaktong px na nilagay mo kanina */
+  }
+}
+
+/* Sa mobile, normal stacking na may malinis na spacing */
+@media (max-width: 800px) {
+  #about .two > div:last-child {
+    transform: none;
+    margin-top: 28px;
+  }
+}
